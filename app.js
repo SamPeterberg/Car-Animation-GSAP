@@ -11,7 +11,7 @@ var run = document.getElementById("run");
 function move() {
   green.style.backgroundColor = "rgb(33, 255, 81)";
   run.play();
-  go = gsap.to(car, { x: -1400, duration: 5, ease: "none" }).repeat(Infinity);
+  gsap.fromTo(car, { x: 10 }, { x: -1500, duration: 5 }).repeat(Infinity);
 }
 
 // for yellow light
