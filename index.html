@@ -9,14 +9,25 @@
   <body>
     <div id="bg">
       <div id="car-img">
-        <img src="/assests/205830850_10815903.png" width="400px" alt="car" />
+        <img
+          src="/assests/images/205830850_10815903.png"
+          width="600px"
+          alt="car"
+        />
       </div>
       <div>
-        <img id="trafic" src="/assests/pngwing.com.png" width="150px" alt="" />
+        <img
+          id="trafic"
+          src="/assests/images/pngwing.com.png"
+          width="150px"
+          alt=""
+        />
         <div onclick="move()" id="green"></div>
-        <div id="yellow"></div>
-        <div id="red"></div>
+        <div onclick="ready()" id="yellow"></div>
+        <div onclick="tostop()" id="red"></div>
       </div>
+      <audio id="ready" src="/assests/sounds/diesel-engine-start-86038.mp3" controls></audio>
+      <audio id="run" src="/assests/sounds/car-chase-sound-effect-240500.mp3" controls></audio>
     </div>
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
