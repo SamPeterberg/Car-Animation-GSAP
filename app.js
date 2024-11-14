@@ -10,18 +10,24 @@ var run = document.getElementById("run");
 // function for moving car
 function move() {
   green.style.backgroundColor = "rgb(33, 255, 81)";
+  yellow.style.backgroundColor = "transparent";
+  red.style.backgroundColor = "transparent";
   run.play();
-  gsap.fromTo(car, { x: 10 }, { x: -1500, duration: 5 }).repeat(Infinity);
+  gsap.fromTo(car, { x: 1000 }, { x: -1500, duration: 5 }).repeat(Infinity);
 }
 
 // for yellow light
 function ready() {
   yellow.style.backgroundColor = "rgb(251, 255, 2)";
+  green.style.backgroundColor = "transparent";
+  red.style.backgroundColor = "transparent";
   start.play();
 }
 
 // for red
 function toStop() {
   red.style.backgroundColor = "rgb(255, 67, 67)";
+  yellow.style.backgroundColor = "transparent";
+  green.style.backgroundColor = "transparent";
   gsap.killTweensOf(car);
 }
