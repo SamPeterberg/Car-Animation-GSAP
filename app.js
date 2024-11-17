@@ -5,7 +5,6 @@ var green = document.getElementById("green");
 var start = document.getElementById("ready");
 var run = document.getElementById("run");
 
-// var go = gsap.to(car, { x: -1400, duration: 5, ease: "none" }).repeat(Infinity);
 
 // function for moving car
 function move() {
