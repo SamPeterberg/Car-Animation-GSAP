@@ -5,14 +5,14 @@ var green = document.getElementById("green");
 var start = document.getElementById("ready");
 var run = document.getElementById("run");
 
-
 // function for moving car
 function move() {
   green.style.backgroundColor = "rgb(33, 255, 81)";
-  yellow.style.backgroundColor = "transparent";
+  yellow.style.visibility = "hidden";
   red.style.backgroundColor = "transparent";
   run.play();
-  gsap.fromTo(car, { x: 1000 }, { x: -1500, duration: 5 }).repeat(Infinity);
+  run.loop = true;
+  gsap.fromTo(car, { x: 50 }, { x: -1500, duration: 5 }).repeat(Infinity);
 }
 
 // for yellow light
@@ -26,7 +26,9 @@ function ready() {
 // for red
 function toStop() {
   red.style.backgroundColor = "rgb(255, 67, 67)";
+  yellow.style.visibility = "visible";
   yellow.style.backgroundColor = "transparent";
   green.style.backgroundColor = "transparent";
   gsap.killTweensOf(car);
+  run.pause();
 }
