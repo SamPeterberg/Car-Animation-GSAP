@@ -4,31 +4,27 @@ var yellow = document.getElementById("yellow");
 var green = document.getElementById("green");
 var start = document.getElementById("ready");
 var run = document.getElementById("run");
+let trafficLight = document.getElementById("trafic");
 
 // function for moving car
 function move() {
-  green.style.backgroundColor = "rgb(33, 255, 81)";
+  trafficLight.src = "/assests/images/green light.png";
   yellow.style.visibility = "hidden";
-  red.style.backgroundColor = "transparent";
   run.play();
   run.loop = true;
-  gsap.fromTo(car, { x: 50 }, { x: -1500, duration: 5 }).repeat(Infinity);
+  gsap.fromTo(car, { x: -0 }, { x: 1300, duration: 4 }).repeat(Infinity);
 }
 
 // for yellow light
 function ready() {
-  yellow.style.backgroundColor = "rgb(251, 255, 2)";
-  green.style.backgroundColor = "transparent";
-  red.style.backgroundColor = "transparent";
+  trafficLight.src = "/assests/images/yellow light.png";
   start.play();
 }
 
 // for red
 function toStop() {
-  red.style.backgroundColor = "rgb(255, 67, 67)";
+    trafficLight.src = "/assests/images/red light.png";
   yellow.style.visibility = "visible";
-  yellow.style.backgroundColor = "transparent";
-  green.style.backgroundColor = "transparent";
   gsap.killTweensOf(car);
   run.pause();
 }

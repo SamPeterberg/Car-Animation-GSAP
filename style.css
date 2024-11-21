@@ -13,7 +13,7 @@
 }
 #car-img {
   position: absolute;
-  right: 0;
+  left: -30;
   bottom: 0;
 }
 #trafic {
@@ -24,20 +24,18 @@
 }
 #green {
   position: absolute;
-  top: 24%;
-  right: 48%;
-  width: 50px;
+  top: 20%;
+  right: 47%;
+  width: 70px;
   height: 50px;
-  /* background-color: rgb(33, 255, 81); */
   border-radius: 50%;
 }
 #yellow {
   position: absolute;
-  top: 13%;
+  top: 10%;
   right: 48%;
   width: 50px;
   height: 50px;
-  /* background-color: rgb(251, 255, 2); */
   border-radius: 50%;
 }
 #red {
@@ -46,7 +44,6 @@
   right: 48%;
   width: 50px;
   height: 50px;
-  /* background-color: rgb(255, 67, 67); */
   border-radius: 50%;
 }
 audio {
