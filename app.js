@@ -2,7 +2,7 @@ var car = document.getElementById("car-img");
 var red = document.getElementById("red");
 var yellow = document.getElementById("yellow");
 var green = document.getElementById("green");
-var start = document.getElementById("ready");
+var start = document.getElementById("ready"); 
 var run = document.getElementById("run");
 let trafficLight = document.getElementById("trafic");
 
